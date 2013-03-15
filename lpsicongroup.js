@@ -6,10 +6,17 @@
  * To change this template use File | Settings | File Templates.
  */
 
- function getValue(item){
- 	//console.log($(item).children('.lps_icon_inner').text());
- 	return $(item).text();
- }
+function getValue(item){
+	//console.log($(item).children('.lps_icon_inner').text());
+	return $(item).text();
+}
+
+function mergeCell(droppable, draggable){
+	var value = $(droppable).text() + ", " + getValue(draggable);
+	$(droppable).text(value);
+	draggable.addClass('lps_icon_group');
+	draggable[0].remove();
+}
 
 $(document).ready(function(){
 	//alert('hello');
@@ -30,10 +37,7 @@ $(document).ready(function(){
     	hoverClass:'lps_icon_over',
     	drop:function(event, ui){
 			console.log('droppable drop'+$(this).text());
-			var value = $(this).text() + ", " + getValue(ui.helper);
-			$(this).text(value);
-			$(this).addClass('lps_icon_group');
-			ui.helper[0].remove();
+			mergeCell(this,ui.helper);
 			// Merge icons
 			//$(this).remove();
     	},

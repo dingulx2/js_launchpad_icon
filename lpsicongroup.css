@@ -16,35 +16,41 @@
 #sortable .lps_icon {
 	margin: 13px 13px 13px 6px; 
 	float: left; 
-	width: 190px; 
-	height: 90px; 
-	font-size: 4em; 
+	width: 100px; 
+	height: 100px; 
+	/*overflow: auto;*/
+	/*font-size: 4em; */
 	text-align: center;
-	background-color: white;
-	border: black solid 1px;
+	/*background-color: white;*/
+	/*background-image: url("http://upload.wikimedia.org/wikipedia/commons/8/87/Google_Chrome_icon_%282011%29.png");*/
+	/*background-size:100px 100px;*/
+	/*border: black solid 1px;*/
 }
 
 #sortable .lps_icon_small{
 	background-color: orange;
+	width:30px;
+	height:30px;
+	margin:0px;
 }
 
 #sortable .lps_icon_group{
-	border: green solid 1px;
-	background-color : purple;
+	/*border: green solid 1px;*/
+	background-color : black;
 }
 
-#sortable .lps_icon_over {
+#sortable .lps_icon_over{
 	background-color:gray;
-	border:red solid 1px;
+	/*border:red solid 1px;*/
 }
 
 .sortable-placeholder{
 	margin: 13px 13px 13px 6px; 
 	padding: 1px; 
 	float: left; 
-	width: 90px; 
-	height: 90px; 
-	font-size: 4em; 
+	width: 100px; 
+	height: 100px; 
+	/*font-size: 4em; */
 	text-align: center;
 	background-color:yellow;
 }

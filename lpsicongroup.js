@@ -6,69 +6,76 @@
  * To change this template use File | Settings | File Templates.
  */
 
-function getValue(item){
-	//console.log($(item).children('.lps_icon_inner').text());
-	return $(item).text();
-}
+function makeLaunchpad(args){
+	
+	container = args['container'];
+	item = args['item'];
 
-function mergeCell(droppable, draggable){
-	var value = $(droppable).text() + ", " + getValue(draggable);
-	$(droppable).text(value);
-	draggable.addClass('lps_icon_group');
-	draggable[0].remove();
-}
-
-$(document).ready(function(){
-	//alert('hello');
-
-    $("#sortable").sortable({
-    	//placeholder:"sortable-placeholder",
-	    //forcePlaceholderSize: true,
-	    items: "> .lps_icon",
+	// Sortable
+    $(container).sortable({
+	    items: item,
+	    cursor: "move",
+	    delay: 150,
 	    out: function(event, ui){
-	    	//console.log('sortable out [' + event + "]: " + $(ui));
 	    },
-	    //helper: 'clone',
-    	//forcePlaceholderSize: true,
     	refreshPositions: true,
     });
 
-    $(".lps_icon").droppable({
-    	hoverClass:'lps_icon_over',
-    	drop:function(event, ui){
-			console.log('droppable drop'+$(this).text());
-			mergeCell(this,ui.helper);
-			// Merge icons
-			//$(this).remove();
-    	},
+    // Droppable for Grouping
+    $(item).droppable({
 	    over: function( event, ui ) {
-    		//console.log('droppable over' + $(this).text());
-    		//$(ui.helper[0]).children('.lps_icon_inner').addClass('lps_icon_small');
     		$(ui.helper[0]).addClass('lps_icon_small');
     	},
     	out: function(event, ui){
-    		//console.log('droppable out' + $(this).text());
     		$(ui.helper[0]).removeClass('lps_icon_small');
-    		//$(ui.helper[0]).children('.lps_icon_inner').removeClass('lps_icon_small');
     	}
     });
 
-    $(".lps_icon").click(function(){
-		alert('click');
+    //Actions
+	if(args['group_class']){
+		console.log('group_class');
+		$(item).droppable( "option", "hoverClass", args['group_class'] );
+	}
+
+	if(args['drop_callback']){
+		$(item).on("drop", function( event, ui ) { args['drop_callback'](this, ui.helper); } );
+	}
+
+	// icon click	
+    $(item).click(function(){
+		console.log($(this).children());
 		// do something here
 	});
 
-/*
-	$('.lps_icon_inner').droppable({
-		drop: function( event, ui ) {
-			alert($(this).text());
-			// check status here
-			// if it is grouping action : make a group or merge group
-			// else it is sorting action : sort
-			// else move original position
-			return true;
-		}
+}
+
+
+function getValue(item){
+	//console.log($(item).children('.lps_icon_inner').text());
+	return $(item);
+}
+
+function mergeCell(droppable, draggable){
+	//var value = 
+	$(droppable).append($(draggable).children());
+	$(droppable).children('img').addClass('lps_icon_small');
+	//alert(value);
+	//$(droppable).text(value);
+
+	$(droppable).addClass('lps_icon_group');
+	$(draggable[0]).remove();
+}
+
+// Sample
+$(document).ready(function(){
+
+	makeLaunchpad({
+		container:'#sortable',
+		item:'.lps_icon',
+		group_class:'lps_icon_over',
+		drop_callback:mergeCell,
 	});
-*/	
+
+
 });
 

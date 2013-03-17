@@ -16,7 +16,9 @@
 }
 
 #sortable .lps_icon {
-	margin: 10px 10px 10px 10px; 
+	margin: 10px;
+	margin-top:15px;
+	margin-bottom:30px;
 	float: left; 
 	width: 300px; 
 	height: 150px; 
@@ -120,15 +122,36 @@
 
 
 .icon_description{
-	display:none;
+	/*display:none;*/
 	color:white;
 	background-color: rgba(0,0,0,0.2);
 	border-radius:5px;
 	width:150px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+.lps_icon_over .icon_description{
+	display:none;
+	color:white;
+	background-color: rgba(0,0,0,0.2);
+	border-radius:5px;
+	width:50px;
 }
 
 .lps_icon_group .icon_description{
 	display:none;
+	color:white;
+	background-color: rgba(0,0,0,0.2);
+	border-radius:5px;
+	width:50px;
+}
+
+.lps_icon_group .group_description{
+	/*display:none;*/
+	float:left;
 	color:white;
 	background-color: rgba(0,0,0,0.2);
 	border-radius:5px;

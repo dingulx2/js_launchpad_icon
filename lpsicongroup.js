@@ -59,6 +59,7 @@ function mergeCell(droppable, draggable){
 	//var value = 
 	$(droppable).append($(draggable).children());
 	$(droppable).children('img').addClass('lps_icon_small');
+	$(droppable).children('img').removeClass('lps_icon_small');
 	//alert(value);
 	//$(droppable).text(value);
 

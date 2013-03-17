@@ -8,51 +8,129 @@
 
 #sortable { 
 	list-style-type: none; 
-	margin: 0;
-	padding: 0; 
-	width: 900px; 
+	margin: 0px;
+	padding: 0px; 
+	width: 1600px;
+	height: 1056px;
+	background: url("http://www.stfc.ac.uk/resources/image/andromeda.jpg");
 }
 
 #sortable .lps_icon {
-	margin: 13px 13px 13px 6px; 
+	margin: 10px 10px 10px 10px; 
 	float: left; 
-	width: 100px; 
-	height: 100px; 
+	width: 300px; 
+	height: 150px; 
 	/*overflow: auto;*/
 	/*font-size: 4em; */
 	text-align: center;
+	/*margin-bottom: 10px;*/
 	/*background-color: white;*/
 	/*background-image: url("http://upload.wikimedia.org/wikipedia/commons/8/87/Google_Chrome_icon_%282011%29.png");*/
 	/*background-size:100px 100px;*/
 	/*border: black solid 1px;*/
 }
 
-#sortable .lps_icon_small{
-	background-color: orange;
-	width:30px;
-	height:30px;
-	margin:0px;
+/*#sortable .lps_icon_image{
+	width:150px;
+	height:150px;
+}*/
+
+.lps_icon .lps_icon_image{
+	width:150px;
+	height:150px;	
 }
+
+#sortable .lps_icon_small{
+	/*background-color: orange;*/
+	/*border-radius:5px;*/
+	/*border:1px solid black;*/
+	/*width:50px;*/
+	/*height:50px;*/
+	/*margin:0px;*/
+}
+#sortable .lps_icon_small .lps_icon_image{
+	width:100px;
+	height:100px;
+}
+
+#sortable .lps_icon_group .lps_icon_image{
+	width:50px;
+	height:50px;
+} 
 
 #sortable .lps_icon_group{
 	/*border: green solid 1px;*/
-	background-color : black;
+	border-radius: 20px;
+	background-color:rgba(255,255,255,0.3);
+	/*background-image: url("http://osxdaily.com/wp-content/uploads/2011/10/NSTexturedFullScreenBackgroundColor.png");*/
+	width: 300px;
+	height:150px;
+	overflow: hidden;
+	float:left;
+	/*padding:5px;*/
+	/*padding-left: 10px;*/
+	/*padding-right: 10px;*/
+}
+
+.lps_icon_group .lps_icon_image{
+	width:50px;
+	height:50px;
+	float:left;
+	margin:1px;
+	/*background-color: orange;*/
 }
 
 #sortable .lps_icon_over{
-	background-color:gray;
+	background-color:rgba(255,255,255,0.15);
+	/*border:1px solid black;*/
+	/*width:150px;*/
+	/*height:50px;*/
+	border-radius:20px;
+	display:block;
 	/*border:red solid 1px;*/
 }
+
+#sortable .lps_icon_over .lps_icon_image{
+	width:100px;
+	height:100px;
+}
+
+#sortable .lps_icon_over .lps_icon_image{
+	width:100px;
+	height:100px;
+	float:left;
+}
+
+#sortable .lps_icon_group .lps_icon_image{
+	width:50px;
+	height:50px;
+}
+
 
 .sortable-placeholder{
 	margin: 13px 13px 13px 6px; 
 	padding: 1px; 
 	float: left; 
-	width: 100px; 
-	height: 100px; 
+	width: 150px; 
+	height: 150px; 
 	/*font-size: 4em; */
 	text-align: center;
 	background-color:yellow;
 }
 
 
+.icon_description{
+	display:none;
+	color:white;
+	background-color: rgba(0,0,0,0.2);
+	border-radius:5px;
+	width:150px;
+}
+
+.lps_icon_group .icon_description{
+	display:none;
+	color:white;
+	background-color: rgba(0,0,0,0.2);
+	border-radius:5px;
+	width:50px;
+}

@@ -10,6 +10,9 @@ var sortable = 0;
 var small_icon_class = 0;
 var container = 0;
 var group_class = 0;
+var group_opened = false;
+
+
 function makeLaunchpad(args){
 	
 	container = args['container'];
@@ -35,7 +38,11 @@ function makeLaunchpad(args){
     });
 
     $(container).click(function(){
-    	alert('sortable!');
+    	if(group_opened){
+    		alert('group close');
+    		$(container).sortable('enable');
+    		group_opened = false;
+    	}
     	return false;
     });
 
@@ -67,7 +74,10 @@ function makeLaunchpad(args){
 		console.log($(this).children());
 		// do something here
 		if($(this).children().hasClass(group_class)){
-			alert('group click');
+			alert('group open');
+			group_opened = true;
+			// disable others
+			$(container).sortable('disable');
 			return false;
 		}else{
 			alert('icon click')

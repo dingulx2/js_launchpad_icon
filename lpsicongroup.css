@@ -1,92 +1,90 @@
 
 .lps_container{
-	border:black 1px solid;
+	/*border:black 1px solid;*/
 	display: block;
 	overflow: auto;
-
-}
-
-#sortable { 
-	list-style-type: none; 
+		/*list-style-type: none; */
 	margin: 0px;
-	padding: 0px; 
-	width: 1280px;
-	height: 1056px;
+	padding: 10px;
+	padding-top:0px;
+	padding-bottom: 40px; 
+	width: 1400px;
+	/*height: 1056px;*/
 	/*background-color:red;*/
-	background: url("http://www.hdwallpapers.in/walls/shining_edge_universe-normal.jpg");
+	background: url("da_background_blur.png");
+	background-size: 100%;
+	/*opacity: 0.4;*/
+
 }
 
 #sortable .lps_icon {
-	margin: 15px;
-	margin-top:15px;
+	margin: 40px;
+	margin-top:40px;
 	margin-bottom:40px;
 	float: left; 
-	width: 280px; 
+	/*padding:9px;*/
+	width: 150px; 
 	height: 150px; 
 	text-align: center;
 }
 
-
 #sortable .lps_icon_group{
 	border-radius: 20px;
-	background-color:rgba(255,255,255,0.3);
-	width: 280px;
+	/*background-color:rgba(255,255,255,0.3);*/
+	background-image: url("group_background.png");
+	background-size: 100%;
+	width: 150px;
 	height:150px;
+	padding:9px;
 	overflow: hidden;
 	/*float:left;*/
 }
 
 
 .lps_icon .lps_icon_image{
-	width:150px;
-	height:150px;	
+	width:168px;
+	height:168px;	
 }
 
-#sortable .lps_icon_small{
-
-}
 #sortable .lps_icon_small .lps_icon_image{
-	width:100px;
-	height:100px;
+	width:120px;
+	height:120px;
+}
+
+#sortable .lps_icon_over .lps_icon_image{
+	width:120px;
+	height:120px;
+	float:left;
 }
 
 #sortable .lps_icon_group .lps_icon_image{
-	width:50px;
-	height:50px;
-} 
-
-.lps_icon_group .lps_icon_image{
-	width:50px;
-	height:50px;
+	width:40px;
+	height:40px;
 	float:left;
 	margin:1px;
+	padding:4px;
 	/*background-color: orange;*/
 }
 
-#sortable .lps_icon_over{
-	background-color:rgba(255,255,255,0.15);
-	/*border:1px solid black;*/
-	/*width:150px;*/
-	/*height:50px;*/
-	border-radius:20px;
-	display:block;
-	/*border:red solid 1px;*/
+#sortable .lps_icon_over .lps_icon_group{
+	opacity: 0.8;
 }
 
-#sortable .lps_icon_over .lps_icon_image{
+#sortable .lps_icon_over .lps_icon_single{
+	/*background-color:rgba(255,255,255,0.15);*/
+	background-image: url("group_background.png");
+	background-size: 100%;
+	opacity: 0.8;
+	width:150px;
+	height:150px;
+	border-radius : 20px;
+	padding:9px;
+}
+
+
+#sortable .lps_icon_over .lps_icon_single .lps_icon_image{
 	width:100px;
 	height:100px;
-}
-
-#sortable .lps_icon_over .lps_icon_image{
-	width:100px;
-	height:100px;
-	float:left;
-}
-
-#sortable .lps_icon_group .lps_icon_image{
-	width:50px;
-	height:50px;
 }
 
 
@@ -114,7 +112,7 @@
 }
 
 
-.lps_icon_over .icon_description{
+.lps_icon_over .lps_icon_single .icon_description{
 	display:none;
 }
 

@@ -26,6 +26,20 @@
 	width: 150px; 
 	height: 150px; 
 	text-align: center;
+	display: block;
+}
+
+#sortable .lps_icon_single{
+	border-radius: 20px;
+	/*background-color:rgba(255,255,255,0.3);*/
+	/*background-image: url("group_background.png");*/
+	/*background-size: 100%;*/
+	width: 160px;
+	height:160px;
+	/*padding:9px;*/
+	/*overflow: hidden;*/
+	/*float:left;*/
+	display: block;
 }
 
 #sortable .lps_icon_group{
@@ -37,13 +51,16 @@
 	height:150px;
 	padding:9px;
 	overflow: hidden;
+	display:block;
 	/*float:left;*/
 }
 
 
-.lps_icon .lps_icon_image{
-	width:168px;
-	height:168px;	
+#sortable .lps_icon_single .lps_icon_image{
+	width:150px;
+	height:150px;
+	padding:9px;
+	margin:-2px;
 }
 
 #sortable .lps_icon_small .lps_icon_image{
@@ -51,11 +68,6 @@
 	height:120px;
 }
 
-#sortable .lps_icon_over .lps_icon_image{
-	width:120px;
-	height:120px;
-	float:left;
-}
 
 #sortable .lps_icon_group .lps_icon_image{
 	width:40px;
@@ -83,8 +95,9 @@
 
 
 #sortable .lps_icon_over .lps_icon_single .lps_icon_image{
-	width:100px;
-	height:100px;
+	width:80px;
+	height:80px;
+	float:left;
 }
 
 

@@ -25,7 +25,7 @@ function makeLaunchpad(args){
     $(container).sortable({
 	    items: item,
 	    cursor: "move",
-	    delay: 100,
+	    // delay: 100,
 	    forcePlaceholderSize: false,
 	    out: function(event, ui){
 	    },

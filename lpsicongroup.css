@@ -12,30 +12,29 @@
 	padding: 0px; 
 	width: 1600px;
 	height: 1056px;
-	background: url("http://www.stfc.ac.uk/resources/image/andromeda.jpg");
+	background: url("http://www.hdwallpapers.in/walls/shining_edge_universe-normal.jpg");
 }
 
 #sortable .lps_icon {
-	margin: 10px;
+	margin: 15px;
 	margin-top:15px;
 	margin-bottom:30px;
 	float: left; 
-	width: 300px; 
+	width: 280px; 
 	height: 150px; 
-	/*overflow: auto;*/
-	/*font-size: 4em; */
 	text-align: center;
-	/*margin-bottom: 10px;*/
-	/*background-color: white;*/
-	/*background-image: url("http://upload.wikimedia.org/wikipedia/commons/8/87/Google_Chrome_icon_%282011%29.png");*/
-	/*background-size:100px 100px;*/
-	/*border: black solid 1px;*/
 }
 
-/*#sortable .lps_icon_image{
-	width:150px;
+
+#sortable .lps_icon_group{
+	border-radius: 20px;
+	background-color:rgba(255,255,255,0.3);
+	width: 280px;
 	height:150px;
-}*/
+	overflow: hidden;
+	float:left;
+}
+
 
 .lps_icon .lps_icon_image{
 	width:150px;
@@ -43,12 +42,7 @@
 }
 
 #sortable .lps_icon_small{
-	/*background-color: orange;*/
-	/*border-radius:5px;*/
-	/*border:1px solid black;*/
-	/*width:50px;*/
-	/*height:50px;*/
-	/*margin:0px;*/
+
 }
 #sortable .lps_icon_small .lps_icon_image{
 	width:100px;
@@ -59,20 +53,6 @@
 	width:50px;
 	height:50px;
 } 
-
-#sortable .lps_icon_group{
-	/*border: green solid 1px;*/
-	border-radius: 20px;
-	background-color:rgba(255,255,255,0.3);
-	/*background-image: url("http://osxdaily.com/wp-content/uploads/2011/10/NSTexturedFullScreenBackgroundColor.png");*/
-	width: 300px;
-	height:150px;
-	overflow: hidden;
-	float:left;
-	/*padding:5px;*/
-	/*padding-left: 10px;*/
-	/*padding-right: 10px;*/
-}
 
 .lps_icon_group .lps_icon_image{
 	width:50px;

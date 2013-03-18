@@ -5,7 +5,7 @@
  * Time: 오후 5:45
  * To change this template use File | Settings | File Templates.
  */
-
+var index = 0;
 function makeLaunchpad(args){
 	
 	container = args['container'];
@@ -19,6 +19,9 @@ function makeLaunchpad(args){
 	    out: function(event, ui){
 	    },
     	refreshPositions: true,
+    	// opacity: 0.8,
+    	// TODO : callback function after item moved (ajax call to server)
+    	stop:function(event, ui){console.log(''+index + 'end'); index = index+1;}
     });
 
     // Droppable for Grouping

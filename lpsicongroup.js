@@ -34,6 +34,11 @@ function makeLaunchpad(args){
     	}
     });
 
+    $(container).click(function(){
+    	alert('sortable!');
+    	return false;
+    });
+
     // Droppable for Grouping
     if(small_icon_class){
 	    $(item).droppable({
@@ -63,10 +68,10 @@ function makeLaunchpad(args){
 		// do something here
 		if($(this).children().hasClass(group_class)){
 			alert('group click');
-			return true;
+			return false;
 		}else{
 			alert('icon click')
-			return true;
+			return false;
 		}
 	});
 

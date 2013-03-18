@@ -10,15 +10,16 @@
 	list-style-type: none; 
 	margin: 0px;
 	padding: 0px; 
-	width: 1600px;
+	width: 1280px;
 	height: 1056px;
+	/*background-color:red;*/
 	background: url("http://www.hdwallpapers.in/walls/shining_edge_universe-normal.jpg");
 }
 
 #sortable .lps_icon {
 	margin: 15px;
 	margin-top:15px;
-	margin-bottom:30px;
+	margin-bottom:40px;
 	float: left; 
 	width: 280px; 
 	height: 150px; 
@@ -32,7 +33,7 @@
 	width: 280px;
 	height:150px;
 	overflow: hidden;
-	float:left;
+	/*float:left;*/
 }
 
 
@@ -102,7 +103,7 @@
 
 
 .icon_description{
-	/*display:none;*/
+	margin-top:10px;
 	color:white;
 	background-color: rgba(0,0,0,0.2);
 	border-radius:5px;
@@ -115,25 +116,8 @@
 
 .lps_icon_over .icon_description{
 	display:none;
-	color:white;
-	background-color: rgba(0,0,0,0.2);
-	border-radius:5px;
-	width:50px;
 }
 
 .lps_icon_group .icon_description{
 	display:none;
-	color:white;
-	background-color: rgba(0,0,0,0.2);
-	border-radius:5px;
-	width:50px;
-}
-
-.lps_icon_group .group_description{
-	/*display:none;*/
-	float:left;
-	color:white;
-	background-color: rgba(0,0,0,0.2);
-	border-radius:5px;
-	width:50px;
 }

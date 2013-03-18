@@ -9,7 +9,8 @@ var index = 0;
 function makeLaunchpad(args){
 	
 	container = args['container'];
-	item = args['item'];
+	var item = args['item'];
+	var group_class = args['group_class'];
 
 	// Sortable
     $(container).sortable({
@@ -35,9 +36,8 @@ function makeLaunchpad(args){
     });
 
     //Actions
-	if(args['group_class']){
-		console.log('group_class');
-		$(item).droppable( "option", "hoverClass", args['group_class'] );
+	if(args['group_over_class']){
+		$(item).droppable( "option", "hoverClass", args['group_over_gclass'] );
 	}
 
 	if(args['drop_callback']){
@@ -48,6 +48,13 @@ function makeLaunchpad(args){
     $(item).click(function(){
 		console.log($(this).children());
 		// do something here
+		if($(this).children().hasClass(group_class)){
+			alert('group click');
+			return true;
+		}else{
+			alert('icon click')
+			return true;
+		}
 	});
 
 }
@@ -60,13 +67,28 @@ function getValue(item){
 
 function mergeCell(droppable, draggable){
 	//var value = 
-	$(droppable).append($(draggable).children());
+
+	if($(droppable).children().hasClass('lps_icon_single')){
+		// alert('add to icon');
+		$(droppable).children('.lps_icon_single').addClass('lps_icon_group');
+		$(droppable).children('.lps_icon_group').removeClass('lps_icon_single');
+		$(droppable).append('<div class="icon_description">New Quest Group</div>');
+	}else{
+		// do nothing
+		// alert('add to group');
+	}
+
+	if((draggable).children().hasClass('lps_icon_group')){
+		// alert('draggable is group');
+		$(droppable).children('.lps_icon_group').append($(draggable).children('.lps_icon_group').children());
+	}else{
+		// alert('draggable is icon');
+		$(droppable).children('.lps_icon_group').append($(draggable).children('.lps_icon_single').children());
+	}
+	
 	$(droppable).children('img').addClass('lps_icon_small');
 	$(droppable).children('img').removeClass('lps_icon_small');
-	//alert(value);
-	//$(droppable).text(value);
 
-	$(droppable).addClass('lps_icon_group');
 	$(draggable[0]).remove();
 }
 
@@ -76,7 +98,8 @@ $(document).ready(function(){
 	makeLaunchpad({
 		container:'#sortable',
 		item:'.lps_icon',
-		group_class:'lps_icon_over',
+		// group_over_class:'lps_icon_over',
+		group_class:'lps_icon_group',
 		drop_callback:mergeCell,
 	});
 
